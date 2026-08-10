@@ -14,6 +14,10 @@ Turns a plain-English app idea into an executable, dependency-ordered build plan
 Scans any repo into a knowledge graph and renders every function as an interactive learning session — plain-English walkthrough, senior-dev depth, and a predict-the-behavior quiz. A content-quality audit pipeline lifted generated-lesson accuracy from ~79% to ~95% on a 600+ function codebase.
 `TypeScript · Next.js · Node · PostgreSQL · D3 · TS Compiler API`
 
+### Scriptorium — multi-agent research & script writers' room
+A multi-agent orchestration system that takes a video topic, fans out across Tier-1 government and institutional sources, runs a 7-critic review board (accuracy, engagement, framing, narrative arc…), and produces a verified, citation-backed script. Feeds directly into the vidforge video pipeline. All four production phases shipped; 273/273 gate tests passing.
+`Python · Multi-agent orchestration · RAG · ffmpeg`
+
 ### Futurity Engine — AI build plans for hardware
 Regulation-aware build-plan engine for embedded/firmware projects (IoT, drones, medical, industrial) with a self-validating trust layer: adversarial critic, citation audit, and anti-fabrication grounding.
 `TypeScript · Next.js · Firebase · SSE`
@@ -26,6 +30,8 @@ Clinician intake, standardized assessments (ASRS), and AI-assisted reporting —
 - **IASA** — autonomous auto-scaling platform (Go, WebSockets, live telemetry, failover)
 - **DataGuard** — real-time data-pipeline anomaly detection (InfluxDB, containerized services, CI)
 - **Complyant** — compliance management across SOC 2 / HIPAA / FedRAMP / ISO 27001 (NestJS pnpm monorepo, WorkOS, AWS CDK)
+- **ReceiptRadar** — personal expense intelligence: receipt scanning, spending pattern analysis, and a personal price index over time
+- **Fayton** — AI learning engine that scaffolds any topic across all 7 levels of Bloom's taxonomy, powered by VisualPRD's step-execution pipeline
 - **vidforge** — an owned faceless-video production pipeline (Python, ffmpeg, ElevenLabs, frame-exact caption sync)
 
 > Most product repos are private (commercial). I'm happy to walk through any of them live, or grant reviewer access on request.
