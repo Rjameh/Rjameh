@@ -4,6 +4,12 @@
 
 My specialty is making AI systems that are **honest about their own limits and correct enough to actually run** — verification gates, deterministic confidence scoring, and trust reports that say *UNASSESSED* instead of inventing a number.
 
+## What I do
+- **Web apps with AI built in**
+- **AI automation** — tools that handle multi-step work, with checks so the results can be trusted
+- **Privacy-first apps** — personal details are removed before any AI sees them
+- **Video production tools** — from script to finished video
+
 ## 🔧 What I build
 
 ### [PRD Executor](https://www.prdexecutor.com) — live SaaS
@@ -15,7 +21,7 @@ Scans any repo into a knowledge graph and renders every function as an interacti
 `TypeScript · Next.js · Node · PostgreSQL · D3 · TS Compiler API`
 
 ### Scriptorium — multi-agent research & script writers' room
-A multi-agent orchestration system that takes a video topic, fans out across Tier-1 government and institutional sources, runs a 7-critic review board (accuracy, engagement, framing, narrative arc…), and produces a verified, citation-backed script. Feeds directly into the vidforge video pipeline. All four production phases shipped; 273/273 gate tests passing.
+A multi-agent orchestration system that takes a video topic, fans out across Tier-1 government and institutional sources, runs a 7-critic review board (accuracy, engagement, framing, narrative arc…), and produces a verified, citation-backed script. Feeds directly into the VidSolve video pipeline. All four production phases shipped; 273/273 gate tests passing.
 `Python · Multi-agent orchestration · RAG · ffmpeg`
 
 ### Futurity Engine — AI build plans for hardware
@@ -32,9 +38,9 @@ Clinician intake, standardized assessments (ASRS), and AI-assisted reporting —
 - **Complyant** — compliance management across SOC 2 / HIPAA / FedRAMP / ISO 27001 (NestJS pnpm monorepo, WorkOS, AWS CDK)
 - **ReceiptRadar** — personal expense intelligence: receipt scanning, spending pattern analysis, and a personal price index over time
 - **Fayton** — AI learning engine that scaffolds any topic across all 7 levels of Bloom's taxonomy, powered by VisualPRD's step-execution pipeline
-- **vidforge** — an owned faceless-video production pipeline (Python, ffmpeg, ElevenLabs, frame-exact caption sync)
+- **VidSolve** — my own private video studio: one sentence becomes a finished narrated short, or a YouTube video of up to 20 minutes, with character voices, sound effects, AI animation, pacing checks, and a built-in guide and quiz (TypeScript, Next.js, ffmpeg, ElevenLabs, Gemini)
 
-> Most product repos are private (commercial). I'm happy to walk through any of them live, or grant reviewer access on request.
+> Most of my projects are private. I'm happy to walk you through them live, or give access on request.
 
 ## 🧠 How I work
 Trace before patching · find the single source of truth · make the wrong state impossible · verify against real data before calling it done · be honest about what's solid and what isn't.
