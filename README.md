@@ -42,7 +42,7 @@ Consent-gated intake, ASRS assessments and AI-assisted reports. Personal details
 Trace before patching. Let independent tools judge the result, not the AI: tests, simulators, datasheets, rule checkers. Prove a check works by watching it fail when it should. Price every paid AI call before it runs. Say plainly what is solid and what is not.
 
 ## Education
-MSc Advanced Computer Science (data science focus), University of Reading · BSc (Hons) Computer Science, University of Jos · Microsoft Certified: Azure AI Fundamentals
+BSc Computer Science · MSc Computer Science
 
 ## Reach me
 johnameh.ca@gmail.com · [LinkedIn](https://www.linkedin.com/in/johnameh) · [prdexecutor.com](https://www.prdexecutor.com) · Ottawa, Canada
