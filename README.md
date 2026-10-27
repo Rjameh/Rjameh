@@ -1,49 +1,48 @@
 # Hi, I'm John Ameh
 
-**Full-stack & AI engineer.** I design and ship complete AI products solo — from the multi-agent pipeline down to the database, the UI, and the deploy. BSc Computer Science (Hons) · MSc Advanced Computer Science (data-science focus), University of Reading.
+**Full-stack and AI engineer, Ottawa (open to remote).** I design, build and ship complete AI products end to end, across software, media, healthcare and hardware. I work AI-native: I direct AI coding agents (Claude Code), set the architecture and the rules, review every change, and let independent tools (tests, simulators, rule checkers) decide whether it works.
 
-My specialty is making AI systems that are **honest about their own limits and correct enough to actually run** — verification gates, deterministic confidence scoring, and trust reports that say *UNASSESSED* instead of inventing a number.
+I have been teaching myself and building software since 2009, starting with PHP and MySQL, through a BSc and MSc in computer science and years of data work (Systems Analyst at Abbott Point of Care, SQL developer, data analytics), to the products below. That data background is why my products rest on sound data.
 
-## What I do
-- **Web apps with AI built in**
-- **AI automation** — tools that handle multi-step work, with checks so the results can be trusted
-- **Privacy-first apps** — personal details are removed before any AI sees them
-- **Video production tools** — from script to finished video
+**All my code is in private repositories.** Each project below can be shown live, or opened to you on request: [email me to ask for access](mailto:johnameh.ca@gmail.com?subject=Access%20request%3A%20John%20Ameh%27s%20projects).
 
-## 🔧 What I build
+## What I build
 
-### [PRD Executor](https://www.prdexecutor.com) — live SaaS
-Turns a plain-English app idea into an executable, dependency-ordered build plan that a coding agent runs step-by-step over a custom **Model Context Protocol (MCP) server**. Frontier model does the architectural thinking once; a budget coder executes verified steps. A representative build's cost dropped from ~$1,900 to ~$150.
-`TypeScript · Next.js · MCP · Firestore · Stripe`
+### [PRD Executor](https://www.prdexecutor.com): live
+An MCP server that turns a product spec into an ordered build plan. A coding agent runs it step by step, and each step is verified before the next one starts. It drives my other builds.
+`Next.js · TypeScript · Model Context Protocol (MCP) · Firestore · Stripe`
 
-### Clicked — AI codebase comprehension
-Scans any repo into a knowledge graph and renders every function as an interactive learning session — plain-English walkthrough, senior-dev depth, and a predict-the-behavior quiz. A content-quality audit pipeline lifted generated-lesson accuracy from ~79% to ~95% on a 600+ function codebase.
-`TypeScript · Next.js · Node · PostgreSQL · D3 · TS Compiler API`
+### Futurity Engine: build plans for hardware (private, access on request)
+Turns an idea for a device into a build plan (a 9-stage AI pipeline with an adversarial critic), checks every part against its maker's datasheet, simulates the circuits, and generates KiCad circuit boards that pass KiCad's own rule checks. On a real IoT design it caught an undersized power filter, a missing mains fuse and ten parts the plan had left out.
+`Next.js · TypeScript · Python · KiCad · ngspice`
 
-### Scriptorium — multi-agent research & script writers' room
-A multi-agent orchestration system that takes a video topic, fans out across Tier-1 government and institutional sources, runs a 7-critic review board (accuracy, engagement, framing, narrative arc…), and produces a verified, citation-backed script. Feeds directly into the VidSolve video pipeline. All four production phases shipped; 273/273 gate tests passing.
-`Python · Multi-agent orchestration · RAG · ffmpeg`
+### GPU Bottleneck Agent (private, access on request)
+A local command-line tool that finds the slowest part of a PyTorch program on an NVIDIA GPU, tries fixes on a copy, and proves each result: outputs checked against the original, before-and-after timing with a statistical test. A fix that is slower or changes the results is reported, never hidden. Built from a 430-step plan; all steps done.
+`Python · PyTorch · CUDA`
 
-### Futurity Engine — AI build plans for hardware
-Regulation-aware build-plan engine for embedded/firmware projects (IoT, drones, medical, industrial) with a self-validating trust layer: adversarial critic, citation audit, and anti-fabrication grounding.
-`TypeScript · Next.js · Firebase · SSE`
+### VidSolve Studio: AI film, book and video production (private, access on request)
+One app from idea to finished film, book or YouTube video: writing, pictures, voice, editing and upload. Every paid AI call is priced and approved first: a 64,000-word novel cost $8.92 in total. Keeps a 529-shot storyboard in step with script rewrites.
+`Next.js · TypeScript · PostgreSQL/Drizzle · Claude, Gemini · Veo · ElevenLabs · FFmpeg`
 
-### mentacare — privacy-first clinical platform
-Clinician intake, standardized assessments (ASRS), and AI-assisted reporting — with **Microsoft Presidio PII scrubbing before any AI call**, MFA, audit logging, and Stripe billing. Built by someone who has actually worked clinic lab operations.
+### Clicked: learn any codebase (private, access on request)
+Teaches a codebase from a knowledge graph: walkthroughs, quizzes, beginner guides checked against a real run, and how the project was built from its git history. Lifted lesson accuracy from about 79% to about 95% on 600+ functions.
+`TypeScript · TypeScript Compiler API · Node/Express · PostgreSQL · D3`
+
+### mentacare: privacy-first clinical platform (private, access on request)
+Consent-gated intake, ASRS assessments and AI-assisted reports. Personal details are removed (Microsoft Presidio) before any AI sees them. MFA, audit log, Stripe billing.
 `Next.js · Supabase · Python (Presidio) · Stripe`
 
-### And more
-- **IASA** — autonomous auto-scaling platform (Go, WebSockets, live telemetry, failover)
-- **DataGuard** — real-time data-pipeline anomaly detection (InfluxDB, containerized services, CI)
-- **Complyant** — compliance management across SOC 2 / HIPAA / FedRAMP / ISO 27001 (NestJS pnpm monorepo, WorkOS, AWS CDK)
-- **ReceiptRadar** — personal expense intelligence: receipt scanning, spending pattern analysis, and a personal price index over time
-- **Fayton** — AI learning engine that scaffolds any topic across all 7 levels of Bloom's taxonomy, powered by VisualPRD's step-execution pipeline
-- **VidSolve** — my own private video studio: one sentence becomes a finished narrated short, or a YouTube video of up to 20 minutes, with character voices, sound effects, AI animation, pacing checks, and a built-in guide and quiz (TypeScript, Next.js, ffmpeg, ElevenLabs, Gemini)
+### Also (private, access on request)
+- **IASA**: Go auto-scaling system with a live dashboard.
+- **Complyant**: compliance platform: NestJS pnpm monorepo, Redis/BullMQ, WorkOS, AWS CDK.
+- **DataGuard**: AI agents that monitor and repair data pipelines; CI with end-to-end tests.
+- **In progress:** Scriptorium (research and script-writing agents with a review board of critics), Fayton (learning engine), ReceiptRadar (personal spending tool).
 
-> Most of my projects are private. I'm happy to walk you through them live, or give access on request.
+## How I work
+Trace before patching. Let independent tools judge the result, not the AI: tests, simulators, datasheets, rule checkers. Prove a check works by watching it fail when it should. Price every paid AI call before it runs. Say plainly what is solid and what is not.
 
-## 🧠 How I work
-Trace before patching · find the single source of truth · make the wrong state impossible · verify against real data before calling it done · be honest about what's solid and what isn't.
+## Education
+MSc Advanced Computer Science (data science focus), University of Reading · BSc (Hons) Computer Science, University of Jos · Microsoft Certified: Azure AI Fundamentals
 
-## 📫 Reach me
-**runfromignorance@gmail.com** · Ottawa, Canada
+## Reach me
+johnameh.ca@gmail.com · [LinkedIn](https://www.linkedin.com/in/johnameh) · [prdexecutor.com](https://www.prdexecutor.com) · Ottawa, Canada
