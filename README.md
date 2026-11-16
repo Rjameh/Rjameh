@@ -11,12 +11,12 @@ Several recent projects were each made for one Anthropic job listing. For those,
 ## Tools that build tools
 
 ### [PRD Executor](https://www.prdexecutor.com): live
-An MCP server that turns a product spec into an ordered build plan. A coding agent runs it step by step, and each step is verified before the next one starts. It also hands the agent house rules and skill files, and gives every prototype screen its own build stage. Most of the projects below were built through it, stage by stage.
+An MCP server that turns a product spec into an ordered build plan. A coding agent runs it step by step, and each step is verified before the next one starts. It also hands the agent house rules and skill files, and gives every prototype screen its own build stage. It plans in any language: web apps, Python tools and a Verilog chip design so far. Each stage leaves a plain-English teach-me note, and a project cannot be marked finished until its CI has passed on a clean machine (a GitHub Actions run the server checks itself). Most of the projects below were built through it, stage by stage.
 `Next.js · TypeScript · Model Context Protocol (MCP) · Firestore · Stripe`
 
 ### Prototype Studio: from one landing page to a full clickable prototype
 Four Claude skills (design system, page patterns, clickable prototype, page review). They start from one landing page designed in Google Stitch and build the whole app as one clickable HTML file. Automatic checks make sure every page fits one screen and every link works. Each built app is then checked screen by screen against these pictures.
-**Status:** in use; it made the prototypes for BioLit Connect, Incident Desk, CyberCoach Bench, Dispatch Desk, Site Walk and Fault Line.
+**Status:** in use; it made the prototypes for BioLit Connect, Incident Desk, CyberCoach Bench, Dispatch Desk, Site Walk, Fault Line and TaskManager (28 pages). Every idea Stitch invents is logged and approved or dropped before a plan is made.
 `Claude skills · Python · Node · Google Stitch`
 
 ### Clicked: learn any codebase
@@ -32,7 +32,7 @@ An agent searches PubMed, Europe PMC, UniProt and PubChem through four MCP tools
 
 ### Agent Eval Lab: fair tests for coding agents
 Researchers write coding tasks with hidden tests, run agent setups in isolated Docker sandboxes, get blind reviews from people, and compare results with statistics. It answers three questions: which setup passes more tasks, which failures are common, and whether an agent's confidence predicts its test result.
-**Status:** built through all 155 steps of its PRD Executor plan, then reworked page by page to match its prototype. A CI smoke test builds the full stack; there is no deploy target yet.
+**Status:** built through all 155 steps of its PRD Executor plan, then reworked page by page to match its prototype. CI on GitHub builds and starts the full Docker stack and passes; there is no deploy target yet.
 `Next.js · TypeScript · FastAPI · PostgreSQL · Docker · SciPy/statsmodels`
 
 ### Injection Gauntlet: prompt-injection test lab
@@ -68,8 +68,15 @@ A phone-first app for data center construction sites. Issues are pinned to the f
 
 ### Fault Line: evidence-first incident diagnosis
 When an alert fires, it lines up every change in the time window (deploys, config, certificates, infrastructure) and builds competing explanations. Each one shows the evidence for and against, a confidence score and the one check that would settle it. A fault injector on a demo system will measure how often the true cause is ranked first.
-**Made for:** Staff+ Software Engineer, Observability. **Status:** prototype done (21 screens); build plan being generated; not built yet.
+**Made for:** Staff+ Software Engineer, Observability. **Status:** built end to end through PRD Executor: 26 stages, 384 Python tests and 34 web tests, all passing in CI on GitHub, all 21 screens checked against its prototype. Mock mode so far; the connectors and the fault injector are simulated, so accuracy numbers are sample data.
 `Next.js · FastAPI · PostgreSQL · Redis · OpenTelemetry · Prometheus, Loki, Tempo, Pyroscope`
+
+## Hardware
+
+### UART Core: a serial port in Verilog, verified like production silicon
+A UART (the serial port chips use to talk to each other) designed in Verilog 2005 and checked with self-checking testbenches, cocotb tests that send all 256 byte values, Verilator lint and Yosys synthesis. Every tool runs from one Docker image, the same on my PC and in CI. The receiver spreads leftover clock cycles across each bit, so it keeps exact timing at every allowed clock speed (before the fix, 5 of 10 tested clock speeds failed the timing test; after it, all 10 pass).
+**Status:** built end to end through PRD Executor: 15 stages, lint with 0 warnings, 301 cells and 0 latches after synthesis, 16 deliberate faults all caught by the tests, CI passing on GitHub, tagged v1.0.0. Not yet run on an FPGA board.
+`Verilog 2005 · Icarus Verilog · Verilator · Yosys · cocotb · Docker · GitHub Actions`
 
 ## AI products in other fields
 
@@ -97,7 +104,7 @@ Consent-gated intake, ASRS assessments and AI-assisted reports. Personal details
 - **In progress:** Scriptorium (research and script-writing agents with a review board of critics), Fayton (learning engine), ReceiptRadar (personal spending tool).
 
 ## How I work
-Trace before patching. Let independent tools judge the result, not the AI: tests, simulators, datasheets, rule checkers. Prove a check works by watching it fail when it should. Price every paid AI call before it runs. Say plainly what is solid and what is not.
+Trace before patching. Let independent tools judge the result, not the AI: tests, simulators, datasheets, rule checkers. Prove a check works by watching it fail when it should. Call a project done only when its CI passes on a clean machine, not just on mine. Price every paid AI call before it runs. Say plainly what is solid and what is not.
 
 ## Education
 BSc Computer Science · MSc Computer Science
